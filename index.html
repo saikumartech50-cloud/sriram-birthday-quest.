@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#080d24">
+<title>Happy Birthday, Sriram! 💙</title>
+<style>
+:root{--pink:#ff72b6;--gold:#ffd76a;--ink:#080d24;--card:#121b40;--white:#f7f7ff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(circle at 15% 5%,#26346d 0,#0c1434 36%,#050817 100%);color:var(--white);font-family:system-ui,-apple-system,Segoe UI,sans-serif;overflow-x:hidden}
+main{width:min(780px,100%);margin:auto;padding:18px 14px 50px;position:relative;z-index:1}
+section{min-height:90vh;display:none;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:26px 5px;scroll-margin-top:10px}
+section.active{display:flex;animation:appear .55s ease both}@keyframes appear{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.eyebrow{color:var(--gold);letter-spacing:.13em;text-transform:uppercase;font-size:.72rem;font-weight:800}
+h1{font-size:clamp(2.8rem,12vw,5.1rem);line-height:.99;margin:15px 0;background:linear-gradient(100deg,#fff,#ffd76a 45%,#ff80b8);-webkit-background-clip:text;background-clip:text;color:transparent}
+h2{font-size:clamp(2rem,7vw,3rem);line-height:1.08;margin:12px 0 18px}
+p{line-height:1.75;color:#e1e5ff;font-size:1rem}.hero p{max-width:520px}
+.cake{font-size:clamp(5rem,22vw,8rem);filter:drop-shadow(0 0 25px #ff6fae66);animation:bob 2.5s ease-in-out infinite}@keyframes bob{50%{transform:translateY(-10px) rotate(2deg)}}
+.btn{border:0;border-radius:999px;padding:13px 21px;font-weight:800;font-size:.98rem;color:#09102c;background:linear-gradient(100deg,var(--gold),#ff91c5);cursor:pointer;margin:9px 4px;box-shadow:0 8px 28px #ff8abc25}
+.btn.secondary{background:#222c5a;color:white;border:1px solid #6672ba;box-shadow:none}
+.card{width:100%;max-width:650px;background:linear-gradient(145deg,#141d43ee,#0c1433ee);border:1px solid #5b68a577;border-radius:24px;padding:clamp(18px,5vw,31px);box-shadow:0 20px 60px #0004}
+.note{background:#fff4d9;color:#19203c;border-radius:9px;padding:23px 20px;transform:rotate(-.4deg);text-align:left;box-shadow:0 15px 40px #0004}
+.note p{color:#29304c}.signature{text-align:right;font-weight:800}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;width:100%;max-width:620px}
+.tile{padding:16px 10px;border-radius:17px;background:#172148;border:1px solid #6672ba66;font-size:.94rem}
+.tile span{display:block;font-size:1.8rem;margin-bottom:7px}
+.roast{padding:15px;margin:9px 0;border-radius:17px;text-align:left;color:#10152d;font-weight:650}.roast:nth-child(1){background:#ff8fbd}.roast:nth-child(2){background:#8edcff}.roast:nth-child(3){background:#8df0c3}.roast:nth-child(4){background:#ffe18c}
+.gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px;width:100%;max-width:650px}
+.memory{background:#172148;border:1px solid #6672ba66;padding:9px;border-radius:16px;overflow:hidden}
+.memory img,.memory video{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:10px;background:#080d24;display:block}
+.memory p{font-size:.83rem;margin:7px 3px;color:#dfe4ff}
+.bigphoto{width:100%;max-width:650px;max-height:55vh;object-fit:contain;border-radius:18px;border:2px solid #ffd76a88;box-shadow:0 0 50px #ff72b633}
+.bigheart{font-size:3rem;animation:beat 1.4s infinite}@keyframes beat{50%{transform:scale(1.13)}}
+.small{font-size:.82rem;color:#aab4e8}.progress{position:sticky;top:0;z-index:4;background:#080d24d9;backdrop-filter:blur(10px);padding:10px 14px;text-align:center;font-size:.78rem;color:#b9c4ff}
+.bar{height:5px;background:#28325f;border-radius:99px;max-width:520px;margin:7px auto 0;overflow:hidden}.bar span{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--gold),var(--pink));transition:width .3s}
+#confetti{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:10}
+.conf{position:absolute;top:-15px;width:8px;height:13px;animation:fall linear forwards;border-radius:2px}
+@keyframes fall{to{transform:translateY(110vh) rotate(800deg);opacity:.2}}
+#quizLayer{position:fixed;inset:0;background:#030615eF;display:none;align-items:center;justify-content:center;padding:18px;z-index:20}
+#quizLayer.show{display:flex}.quizbox{width:min(470px,100%);background:#121b40;border:1px solid #ffd76a88;border-radius:24px;padding:25px 20px;text-align:center;box-shadow:0 25px 90px #0009}
+.quizbox h3{font-size:1.5rem;margin:9px 0 12px}.answers{display:grid;gap:9px;margin-top:17px}.answer{width:100%;padding:13px;border-radius:13px;background:#202c5b;border:1px solid #6575b8;color:white;font-weight:700;font-size:.96rem;cursor:pointer}.answer:hover{background:#34427b}
+#quizFeedback{min-height:24px;color:var(--gold);font-weight:700;font-size:.9rem}
+footer{text-align:center;color:#929bc9;font-size:.8rem;padding:20px}
+@media(max-width:390px){main{padding-inline:11px}.grid,.gallery{gap:8px}.tile{padding:13px 7px}.memory{padding:6px}}
+</style></head>
+<body>
+<div class="progress"><span id="progressText">LEVEL 1 OF 6 · BIRTHDAY QUEST</span><div class="bar"><span id="progressBar"></span></div></div>
+<div id="confetti"></div>
+<main>
+<section class="active hero" id="s0">
+<div class="eyebrow">A very important announcement 📣</div>
+<h1>HAPPY<br>BIRTHDAY,<br>SRIRAM! 🎉</h1>
+<p>One year older, still the same legend. Your birthday comes with love, laughter, and a little friendly roasting. 😂💙</p>
+<div class="cake">🎂</div><p class="small">A birthday quest made by your college-time partner in crime.</p>
+<button class="btn" onclick="startQuiz(0)">Start the birthday quest ✨</button>
+</section>
+
+<section id="s1"><div class="eyebrow">Level 2 · The soft part 🥹</div><h2>Dear Sriram…</h2>
+<div class="note">
+<p>Happy birthday, Sriram! 💙</p>
+<p>Some of my favourite college memories are the simple ones — laughing together, being there for each other, and those moments when you literally fed me. 😭😂 It might have looked like a small thing, but memories like that stay with me.</p>
+<p>Thank you for being part of my college days and for giving me moments I can look back on and smile about. I hope life gives you the same kindness, happiness, and care that you have shown me.</p>
+<p>May this year bring you success, peace, good health, big wins, and unlimited food — because clearly, feeding me was excellent training. 😂</p>
+<p class="signature">Always grateful for our friendship. 💙</p>
+</div><button class="btn" onclick="startQuiz(1)">Answer to unlock the next level 🔐</button>
+</section>
+
+<section id="s2"><div class="eyebrow">Level 3 · Friendly fire 🔥</div><h2>A little roast<br><span style="color:var(--gold)">(with love)</span> 😂</h2>
+<div class="card">
+<div class="roast">🍽️ Bro fed me in college, so I guess you accidentally signed up for lifetime friendship service.</div>
+<div class="roast">🤡 You're a whole legend… with occasional software bugs.</div>
+<div class="roast">⏰ Your “I'll be there in 5 minutes” should come with a tracking link.</div>
+<div class="roast">👑 Somehow you're still one of my favourite people. Don't get too proud now.</div>
+</div><button class="btn" onclick="startQuiz(2)">Pass the roast checkpoint 😂</button>
+</section>
+
+<section id="s3"><div class="eyebrow">Level 4 · College memories 📸</div><h2>College days, forever.</h2>
+<p>Proof that the best memories don't need a big plan — just the right people and a camera.</p>
+<div class="gallery">
+<div class="memory"><img src="media/memory1.jpg" alt="Two friends standing together at college"><p>Certified bestie behaviour 🤝</p></div>
+<div class="memory"><img src="media/memory2.jpg" alt="Friends being funny in their classroom"><p>Classroom chaos, captured forever 😂</p></div>
+<div class="memory"><img src="media/memory3.jpg" alt="Two friends taking a mirror selfie"><p>Looking sharp. Acting questionable. 😎</p></div>
+<div class="memory"><img src="media/memory4.jpg" alt="Friends together at an event"><p>Another memory for the collection ✨</p></div>
+</div>
+<div class="card" style="margin-top:15px"><h3>🎬 The legendary feeding memory</h3><video controls playsinline preload="metadata" style="width:100%;max-height:360px;border-radius:14px;background:#030615"><source src="media/feeding-memory.mp4" type="video/mp4">Your browser does not support this video.</video><p class="small">Evidence that Sriram's friendship package includes feeding services. 😂💙</p></div>
+<button class="btn" onclick="startQuiz(3)">Memory checkpoint: prove you were there →</button>
+</section>
+
+<section id="s4"><div class="eyebrow">Level 5 · Your next chapter 🌟</div><h2>Here's what I wish for you.</h2>
+<div class="card"><div class="grid">
+<div class="tile"><span>🚀</span>Big dreams, bigger achievements.</div>
+<div class="tile"><span>😂</span>Laughter that never runs out.</div>
+<div class="tile"><span>🫶</span>People who value your heart.</div>
+<div class="tile"><span>🍕</span>Unlimited food and zero sharing pressure.</div>
+</div><p>I hope you keep becoming the person you want to be. Whatever changes after college, I hope we keep collecting ridiculous stories and making more memories.</p><p><strong>You're not just a college friend; you're a memory I'll always be glad I got to make.</strong></p></div>
+<button class="btn" onclick="startQuiz(4)">One final checkpoint before your wishes 🎁</button>
+</section>
+
+<section id="s5"><div class="eyebrow">Final level · From all of us 💙</div>
+<h2>HAPPY, JOYFUL<br>BIRTHDAY, SRIRAM! 🎉</h2>
+<p>With love, laughter, and best wishes from your whole crew…</p>
+<img class="bigphoto" src="media/group-final.jpg" alt="The Nagaland group together — birthday wishes for Sriram">
+<div class="card" style="margin-top:18px"><div class="bigheart">💙🎂💙</div>
+<h2 style="color:var(--gold)">Nagaland Group</h2>
+<p>Wishing you a very happy, joyful birthday, Sriram! May your year be filled with good health, success, happiness, unforgettable adventures, and friends who keep making life brighter.</p>
+<p style="font-size:1.1rem"><strong>Best wishes from your CaptainSteve</strong> 🫡❤️</p>
+<p>Stay happy. Stay awesome. Keep being you!</p>
+<button class="btn" onclick="burst();document.getElementById('finalReveal').style.display='block';this.textContent='Birthday wishes unlocked 💙'">Tap for one last surprise 🎆</button>
+<p id="finalReveal" style="display:none;color:var(--gold);font-weight:800">🎊 The whole Nagaland Group is wishing you the best birthday ever! 🎊</p>
+</div><button class="btn secondary" onclick="showSection(0)">Replay the birthday quest ↺</button>
+</section>
+<footer>Made with friendship, college memories, and lots of love. 💙</footer>
+</main>
+<div id="quizLayer" role="dialog" aria-modal="true" aria-labelledby="quizQuestion">
+<div class="quizbox"><div class="eyebrow" id="quizLevel">CHECKPOINT</div><h3 id="quizQuestion">Ready?</h3><p class="small">Choose the right answer to unlock the next level.</p><div class="answers" id="answers"></div><p id="quizFeedback" aria-live="polite"></p><button class="btn secondary" onclick="closeQuiz()">Not yet</button></div>
+</div>
+<script>
+const quizzes=[
+ {q:"What is the main birthday mission today?",a:["Celebrate Sriram","Submit an assignment","Skip college","Find a lost charger"],correct:0,success:"Correct! Let the birthday quest begin! 🎉"},
+ {q:"What is one of the special college memories mentioned in the letter?",a:["Sriram teaching karate","Sriram feeding his friend","Building a robot","Winning a cooking show"],correct:1,success:"Exactly. That memory deserves its own highlight reel. 🥹"},
+ {q:"The roast says Sriram accidentally signed up for what?",a:["Lifetime friendship service","A gym membership","A cooking exam","A space mission"],correct:0,success:"Correct 😂 Friendship subscription: lifetime, no cancellation."},
+ {q:"Which special memory video is included on this level?",a:["A cricket final","The college feeding memory","A movie trailer","A coding tutorial"],correct:1,success:"You remember! Unlocking the next chapter… 📸"},
+ {q:"Who is sending the final birthday wishes?",a:["Nagaland Group and CaptainSteve","The exam board","A football club","A delivery company"],correct:0,success:"You passed every checkpoint! The final birthday wishes are yours. 💙"}
+];
+let current=0;
+function showSection(n){document.querySelectorAll("main section").forEach(s=>s.classList.remove("active"));document.getElementById("s"+n).classList.add("active");current=n;document.getElementById("progressText").textContent=`LEVEL ${n+1} OF 6 · BIRTHDAY QUEST`;document.getElementById("progressBar").style.width=((n+1)/6*100)+"%";document.getElementById("quizLayer").classList.remove("show");window.scrollTo({top:0,behavior:"smooth"});if(n===0)burst();}
+function startQuiz(from){const q=quizzes[from];if(!q){showSection(5);return;}document.getElementById("quizLevel").textContent=`CHECKPOINT ${from+1} / 5`;document.getElementById("quizQuestion").textContent=q.q;document.getElementById("quizFeedback").textContent="";const wrap=document.getElementById("answers");wrap.innerHTML="";q.a.forEach((answer,i)=>{const b=document.createElement("button");b.className="answer";b.textContent=answer;b.onclick=()=>{if(i===q.correct){document.getElementById("quizFeedback").textContent=q.success;Array.from(wrap.children).forEach(x=>x.disabled=true);setTimeout(()=>showSection(from+1),850);}else{document.getElementById("quizFeedback").textContent="Not quite! Try again, birthday detective 😄";b.style.borderColor="#ff72b6";}};wrap.appendChild(b)});document.getElementById("quizLayer").classList.add("show");}
+function closeQuiz(){document.getElementById("quizLayer").classList.remove("show");}
+function burst(){const layer=document.getElementById("confetti"),colors=["#ffd76a","#ff6fae","#7c8cff","#8df0c3","#fff"];for(let i=0;i<85;i++){const b=document.createElement("i");b.className="conf";b.style.left=Math.random()*100+"vw";b.style.background=colors[Math.floor(Math.random()*colors.length)];b.style.animationDuration=(2+Math.random()*3)+"s";b.style.animationDelay=Math.random()*.4+"s";layer.appendChild(b);setTimeout(()=>b.remove(),6000)}}
+document.getElementById("progressBar").style.width=(1/6*100)+"%";window.addEventListener("load",()=>setTimeout(burst,350));
+</script></body></html>
